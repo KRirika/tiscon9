@@ -16,6 +16,8 @@ public class UserOrderDto {
 
     private String newAddress;
 
+    private String movingDate;
+
     private String box;
 
     private String bed;
@@ -82,6 +84,14 @@ public class UserOrderDto {
         this.newAddress = newAddress;
     }
 
+    public String getMovingDate() {
+        return movingDate;
+    }
+
+    public void setMovingDate(String movingDate) {
+        this.movingDate = movingDate;
+    }
+  
     public int getBox() {
         return Integer.parseInt(box);
     }
