@@ -31,11 +31,11 @@
           <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
         </div>
         <div class="form-group">
-          <label for="tel">連絡先TEL(半角で入力してください)（例.09011112222）</label>
+          <label for="tel">連絡先TEL<br>※半角で入力してください（例.09011112222）</label>
           <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
         </div>
         <div class="form-group">
-          <label for="email">連絡先メールアドレス(半角で入力してください)（例.example@example.com）</label>
+          <label for="email">連絡先メールアドレス<br>※半角で入力してください（例.example@example.com）</label>
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
         <div class="sub-title">集荷元・お届け先</div>
@@ -46,7 +46,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="oldAddress">集荷元住所（市区町村以下）（例.新宿区西新宿1-1-1）</label>
+          <label for="oldAddress">集荷元住所（市区町村以下）<br>※（例.新宿区西新宿1-1-1）</label>
           <input type="text" id="oldAddress" name="oldAddress" th:field="*{oldAddress}"
                  class="form-control" value="新宿区西新宿1-1-1"/>
         </div>
@@ -57,27 +57,28 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="newAddress">お届け先住所（市区町村以下）（例.新宿区西新宿1-1-1）</label>
+          <label for="newAddress">お届け先住所（市区町村以下）<br>※（例.新宿区西新宿1-1-1）</label>
           <input type="text" id="newAddress" name="newAddress" th:field="*{newAddress}" class="form-control"
                  value="札幌市南区1"/>
         </div>
       </fieldset>
       <fieldset>
-      <div class="sub-title">お荷物情報(半角で入力してください)</div>
+      <div class="sub-title">お荷物情報<br>※半角で入力してください<br>※段ボール換算200個以内で入力してください。
+      <br>(記入例)段ボール12、ベッド2、自転車1、洗濯機1 (合計段ボール数77)</div>
         <div class="form-group">
           <label for="box">段ボールの個数</label>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
         </div>
         <div class="form-group">
-          <label for="bed">ベッドの個数</label>
+          <label for="bed">ベッドの個数(ベッド1つ=段ボール20個)</label>
           <input type="text" id="bed" name="bed" th:field="*{bed}" class="form-control" value="3"/>
         </div>
         <div class="form-group">
-          <label for="bicycle">自転車の個数</label>
+          <label for="bicycle">自転車の個数(自転車1つ=段ボール15個)</label>
           <input type="text" id="bicycle" name="bicycle" th:field="*{bicycle}" class="form-control" value="1"/>
         </div>
         <div class="form-group">
-          <label for="washingMachine">洗濯機の個数</label>
+          <label for="washingMachine">洗濯機の個数(洗濯機1つ=段ボール10個)</label>
           <input type="text" id="washingMachine" name="washingMachine" th:field="*{washingMachine}" class="form-control"
                  value="1"/>
         </div>
