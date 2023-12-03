@@ -88,11 +88,28 @@ public class EstimateService {
         // オプションサービスの料金を算出する。
         int priceForOptionalService = 0;
 
+        //季節料金
+        String str = dto.getMovingDate();
+        String substr = str.substring(5, 7);
+
+        int num = Integer.parseInt(substr);
+        double N = 1.0;
+
+        if ((num == 3 || num == 4)){
+            N = 1.5;
+          }else if (num == 9){
+            N = 1.2;
+          }
+
+
         if (dto.getWashingMachineInstallation()) {
             priceForOptionalService = estimateDAO.getPricePerOptionalService(OptionalServiceType.WASHING_MACHINE.getCode());
         }
 
-        return priceForDistance + pricePerTruck + priceForOptionalService;
+        double Answer = ((double) priceForDistance + (double) pricePerTruck)* N + (double) priceForOptionalService; 
+
+        return (int) Answer;
+
     }
 
     /**
