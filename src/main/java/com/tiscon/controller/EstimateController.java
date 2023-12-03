@@ -4,6 +4,9 @@ import com.tiscon.dao.EstimateDao;
 import com.tiscon.dto.UserOrderDto;
 import com.tiscon.form.UserOrderForm;
 import com.tiscon.service.EstimateService;
+
+import java.util.ArrayList;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -130,11 +133,15 @@ public class EstimateController {
         // 料金の計算を行う。
         UserOrderDto dto = new UserOrderDto();
         BeanUtils.copyProperties(userOrderForm, dto);
-        Integer price = estimateService.getPrice(dto);
+        ArrayList<Integer> priceList = new ArrayList<>(estimateService.getPrice(dto));
 
         model.addAttribute("prefectures", estimateDAO.getAllPrefectures());
         model.addAttribute("userOrderForm", userOrderForm);
-        model.addAttribute("price", price);
+        model.addAttribute("kyori", priceList.get(0));
+        model.addAttribute("truck", priceList.get(1));
+        model.addAttribute("opt", priceList.get(2));
+        model.addAttribute("price", priceList.get(3));
+        
         return "result";
     }
 

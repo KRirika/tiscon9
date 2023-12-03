@@ -21,6 +21,17 @@
     <div class="col-sm-12">
       <div class="text-center">
         <div class="primary-text"><span th:text="${price}"></span>円</div>
+
+      <div class="sub-title">距離</div>
+      <div class="text-center"></div>
+        <div class="primary-text"><span th:text="${kyori}"></span>円</div>
+      <div class="sub-title">トラック輸送費</div>
+      <div class="text-center"></div>
+        <div class="primary-text"><span th:text="${truck}"></span>円</div>
+      <div class="sub-title">オプション料金</div>
+      <div class="text-center"></div>
+        <div class="primary-text"><span th:text="${opt}"></span>円</div>
+
         <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
       </div>
       <div class="sub-title">お客様情報</div>
