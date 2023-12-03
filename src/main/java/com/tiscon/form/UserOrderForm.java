@@ -113,10 +113,10 @@ public class UserOrderForm {
     public void setNewAddress(String newAddress) {
         this.newAddress = newAddress;
     }
-    public String getmovingDate(){
+    public String getMovingDate(){
         return movingDate;
     }
-    public void setmovingDate(String movingDate){
+    public void setMovingDate(String movingDate){
         this.movingDate = movingDate;
     }
 
